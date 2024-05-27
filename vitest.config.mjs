@@ -8,7 +8,10 @@ config();
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   test: {
-    exclude: ['**/tests/e2e/**'],
+    include: [
+      './tests/integration/**/*.test.js',
+      './tests/unit/**/*.test.js'
+    ],
     environmentMatchGlobs: [['**/interface/**/*', 'jsdom']],
     globals: true,
     fileParallelism: false,
