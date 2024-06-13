@@ -7,8 +7,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  unit-tests:
-    name: Unit Tests
+  unit-and-integration-tests:
+    name: Unit and Integrations Tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
