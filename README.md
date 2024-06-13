@@ -82,15 +82,15 @@ Por padrão, ao rodar o comando `npm run dev` será injetado dois usuários ativ
 
 ## Rodar os testes
 
-### Testes unitários
+### Testes unitários e Testes de integração
 
-Há várias formas de rodar os testes dependendo do que você deseja fazer, mas o primeiro passo antes de fazer qualquer alteração no projeto é rodar os testes unitários de forma geral para se certificar que tudo está passando como esperado. O comando abaixo irá rodar todos os serviços necessários, rodar os testes unitários e em seguida derrubar todos os serviços.
+Há várias formas de rodar os testes dependendo do que você deseja fazer, mas o primeiro passo antes de fazer qualquer alteração no projeto é rodar esses testes de forma geral para se certificar que tudo está passando como esperado. O comando abaixo irá rodar todos os serviços necessários, para executá-los e em seguida derrubar todos os serviços.
 
 ```bash
 npm test
 ```
 
-Caso queira manter os serviços e testes unitários rodando enquanto desenvolve (e rodando novamente a cada alteração salva), use o modo `watch` com o comando abaixo:
+Caso queira manter os serviços e testes rodando enquanto desenvolve (e rodando novamente a cada alteração salva), use o modo `watch` com o comando abaixo:
 
 ```bash
 npm run test:watch:services
@@ -106,7 +106,7 @@ npm run dev
 npm run test:watch
 ```
 
-Caso não queira executar (ou dar `watch`) em todos os testes unitários e queira isolar arquivos específicos de teste, você pode filtrar pelo caminho. Não é necessário digitar o caminho inteiro para o arquivo e você também pode fornecer mais de um caminho, veja alguns exemplos abaixo:
+Caso não queira executar (ou dar `watch`) nesses testes e queira isolar arquivos específicos de teste, você pode filtrar pelo caminho. Não é necessário digitar o caminho inteiro para o arquivo e você também pode fornecer mais de um caminho, veja alguns exemplos abaixo:
 
 ```bash
 # Rodar todos os testes de "users" e "status" da api "v1"
@@ -129,7 +129,7 @@ Observações:
 
 ### Testes E2E
 
-Além dos testes unitários o projeto também inclui testes de ponta a ponta (E2E) que simulam o comportamento dos usuários. Esses testes são executados usando o Playwright.
+Além dos testes unitários e de integração o projeto também inclui testes de ponta a ponta (end-to-end ou E2E) que simulam o comportamento dos usuários. Esses testes são executados usando o Playwright.
 
 Para executar os testes em um navegador em segundo plano, em que você não verá a interface do usuário, execute o comando:
 
